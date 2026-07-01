@@ -26,6 +26,22 @@ Loaded models:
     → This is your bottleneck. Fix options below.
 ```
 
+On a healthy machine the model sits fully in VRAM, and you also get the list of
+installed models by size (real run):
+
+```text
+System RAM: 16.0 GB
+
+Loaded models:
+  gemma3:4b
+    total 3.38 GB | VRAM 3.38 GB | 100% on GPU  ✅ fully on GPU
+
+Installed models:
+  nomic-embed-text:latest          0.26 GB
+  gemma3:4b                        3.11 GB
+  qwen2.5-coder:7b                 4.36 GB
+```
+
 ## What it checks
 
 - `/api/ps` — the running model's `size` vs `size_vram` (the % actually on GPU).
