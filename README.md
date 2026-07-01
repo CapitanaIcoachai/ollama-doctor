@@ -2,6 +2,8 @@
 
 **Find out *why* Ollama is slow — in one command.**
 
+![ollama-doctor demo](assets/demo.svg)
+
 The most common reason "Ollama is crawling" is **silent CPU offloading**: the
 model (or part of it) doesn't fit in your GPU's VRAM, so some layers run on the
 CPU and throughput collapses by 10-50×. Ollama does this quietly and never tells
